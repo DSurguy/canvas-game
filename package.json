@@ -1,0 +1,19 @@
+{
+  "name": "canvas-game",
+  "version": "1.0.0",
+  "description": "1. Create room with wall collision\r 2. Create player with wasd movement\r 3. Add mouse click movement to player\r 4. Add mouse hold movement to player",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack-dev-server --port 8123"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}

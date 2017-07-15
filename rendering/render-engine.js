@@ -1,9 +1,12 @@
 export default class RenderEngine{
-    canvasElement;
-    renderFunc;
-    requestCancelRenderLoop = false;
-    constructor(canvasElement){
-        this.canvasElement = canvasElement;
+    constructor(container, size){
+        this.renderFunc = function(){};
+        this.requestCancelRenderLoop = false;
+        this.canvasElement = document.createElement('canvas');
+        size = size || {};
+        this.canvasElement.width = size.width || size.w || size.x || 640;
+        this.canvasElement.height = size.height || size.h || size.y || 480;
+        container.appendChild(this.canvasElement);
     }
 
     startRenderLoop (f){

@@ -4,7 +4,7 @@
   "description": "1. Create room with wall collision\r 2. Create player with wasd movement\r 3. Add mouse click movement to player\r 4. Add mouse hold movement to player",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack-dev-server --port 8123"
+    "dev": "webpack-dev-server --port 8123 --open"
   },
   "author": "",
   "license": "ISC",

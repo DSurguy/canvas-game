@@ -16,4 +16,5 @@ export default class Room{
         //left
         ctx.fillRect(this.bounds[0]-1, this.bounds[1]-1, 2, this.bounds[3]-this.bounds[1]+1);
     }
+    update(){}
 }

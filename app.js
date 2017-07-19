@@ -32,6 +32,36 @@ myEngine.canvasElement.addEventListener('click', function (e){
     e.stopPropagation();
 });
 
+var mouseState = {
+    mouseDown: false
+};
+document.body.addEventListener('mousedown', function (e){
+    mouseState.mouseDown = true;
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+myEngine.canvasElement.addEventListener('mousemove', function (e){
+    if( mouseState.mouseDown ){
+        myPlayer.pathMove(e.offsetX, e.offsetY);
+    }
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+
+myEngine.canvasElement.addEventListener('mouseup', function (e){
+    if( mouseState.mouseDown ){
+        mouseState.mouseDown = false;
+        myPlayer.pathMove(e.offsetX, e.offsetY);
+    }
+    e.preventDefault();
+    e.stopPropagation();
+});
+document.body.addEventListener('mouseup', function (e){
+    mouseState.mouseDown = false;
+});
+
 document.querySelectorAll('input').forEach(function (element){
     element.addEventListener('change', function (e){
         if( this.checked && this.value == "0" ){

@@ -83,7 +83,6 @@ export class Player{
         this.y = y;
     }
     pathMove(x,y){
-        //TODO: collision avoidance
         this.currentMove = new PlayerMove(x,y);
     }
 }

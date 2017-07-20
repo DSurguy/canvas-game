@@ -11,3 +11,6 @@ This project is built on top of nodejs v7+ and npm 5.
 5. Generate multiple rooms and connect them
 6. Add collision exceptions for wall openings
 7. Add smart player pathing
+8. Generate map larger than canvas area
+9. Scroll map with mouse
+10. Minimap
